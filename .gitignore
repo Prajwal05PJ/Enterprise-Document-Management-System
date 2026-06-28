@@ -33,3 +33,6 @@ htmlcov/
 build/
 dist/
 *.egg-info/
+
+# Uploaded files
+storage/uploads/

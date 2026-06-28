@@ -1,9 +1,8 @@
 from fastapi import FastAPI
 
-from app.api.auth import router as auth_router
+from app.api.routes import api_router
 from app.core.config import settings
 from app.core.logging import logger
-from app.api import users
 
 
 app = FastAPI(
@@ -11,8 +10,7 @@ app = FastAPI(
     version="1.0.0",
 )
 
-app.include_router(auth_router)
-app.include_router(users.router)
+app.include_router(api_router)
 
 @app.get("/")
 def root():
